@@ -1,0 +1,18 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+}
+
+img {
+	border-radius: 10px;
+	width: 250px;
+	height: 250px;
+}
+
+#imageConsole {
+	border: 2px solid black;
+	border-radius: 10px;
+}
