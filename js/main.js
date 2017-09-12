@@ -17,18 +17,18 @@ $(document).ready(function(){
 	//Change background color.
 	$("#changeBGC").click(function(){
 		console.log("User changed background color.");
-		
-			function getRandomColor(){
-				var colorLetters = '0123456789ABCDEF';
-				var randomColor = '#';
+		function getRandomColor(){
+			var colorLetters = '0123456789ABCDEF';
+			var randomColor = '#';
 
-				for (var i = 0; i < 6; i++) {
-					randomColor += letters[Math.floor(Math.random() * 16)];
-
+			for (var i = 0; i < 6; i++) {
+				randomColor += colorLetters[Math.floor(Math.random() * 16)];
 			};
+			return randomColor;
+		};
 
- 			$('body').css('background-color', randomColor);
-		});
+ 			$('body').css('background-color', getRandomColor());
+	});
 
 	//Shrink images and disable shrink menu item
 	$("#shrinkImages").click(function(){
