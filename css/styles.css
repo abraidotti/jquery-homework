@@ -6,6 +6,10 @@ body {
 	background-color: white;
 }
 
+nav {
+	background-color: black;
+}
+
 img {
 	border-radius: 10px;
 	width: 250px;

@@ -28,6 +28,7 @@ $(document).ready(function(){
 		};
 
  			$('body').css('background-color', getRandomColor());
+ 			$('nav').css('background-color', getRandomColor());
 	});
 
 	//Shrink images and disable shrink menu item
@@ -47,6 +48,18 @@ $(document).ready(function(){
  		$('img').css({'width':'100%', 'height':'100%'});
 		});
 
+		//Return images to normal size
+	$("#normalizeImages").click(function(){
+		console.log("User normalized images.");
+		$("#shrinkImages").removeClass("disabled");
+		$("#embiggenImages").removeClass("disabled");
+ 		$('img').css({
+ 			'width':'250px',
+ 			'height':'250px',
+ 			'border':'5px'
+ 		});
+	});
+
 	//Apply a round border to images
 	$("#roundImages").click(function(){
 		console.log("User applied round image border.")
@@ -61,13 +74,6 @@ $(document).ready(function(){
 		$(this).addClass("disabled");
 		$("#roundImages").removeClass("disabled");
 		$('img').css('border-radius', '0px');
-	});
-
-	// show/hide the console
-	$('#imageConsole').hide();
-	$('#toggleConsole').click(function(){
-		console.log('User toggled console.');
-    $('#imageConsole').toggle();
 	});
 
 });
